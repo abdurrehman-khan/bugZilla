@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+  resources :bugs
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+
+  # get 'login',  to: 'user_sessions#new',     as: :login
+  # post 'login', to: 'user_sessions#create'
+  # get 'logout', to: 'user_sessions#destroy', as: :logout
+  
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
